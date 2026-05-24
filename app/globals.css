@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Nunito:wght@300;400;600;700&display=swap');
+
+:root {
+  --primary: #0f9b7a;
+  --primary-dark: #0a7a60;
+  --primary-light: #e6f7f3;
+  --secondary: #0d4f3c;
+  --accent: #2bb89a;
+  --teal-bright: #14c48a;
+  --navy: #0a2540;
+  --navy-mid: #1c3d5a;
+  --white: #ffffff;
+  --off-white: #f5faf8;
+  --gray-light: #eef4f2;
+  --gray-mid: #c5d3d0;
+  --gray-text: #6b7c7a;
+  --dark-text: #1a2e2c;
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Nunito', sans-serif;
+  --shadow-sm: 0 2px 8px rgba(15,155,122,0.1);
+  --shadow-md: 0 8px 32px rgba(15,155,122,0.16);
+  --shadow-lg: 0 16px 48px rgba(10,37,64,0.18);
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--font-body);color:var(--dark-text);background:var(--white);line-height:1.6;overflow-x:hidden;}
+h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);font-weight:700;line-height:1.2;}
+a{text-decoration:none;color:inherit;}
+
+@keyframes fadeInUp{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
+@keyframes fadeInLeft{from{opacity:0;transform:translateX(-30px);}to{opacity:1;transform:translateX(0);}}
+@keyframes fadeInRight{from{opacity:0;transform:translateX(30px);}to{opacity:1;transform:translateX(0);}}
+@keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-12px);}}
+@keyframes pulseRing{0%{box-shadow:0 0 0 0 rgba(15,155,122,0.4);}70%{box-shadow:0 0 0 20px rgba(15,155,122,0);}100%{box-shadow:0 0 0 0 rgba(15,155,122,0);}}
+@keyframes slideDown{from{opacity:0;transform:translateY(-10px);}to{opacity:1;transform:translateY(0);}}
+
+.animate-fade-up{animation:fadeInUp 0.7s ease forwards;}
+.animate-fade-left{animation:fadeInLeft 0.7s ease forwards;}
+.animate-fade-right{animation:fadeInRight 0.7s ease forwards;}
+.animate-float{animation:float 3s ease-in-out infinite;}
+.delay-100{animation-delay:0.1s;}.delay-200{animation-delay:0.2s;}.delay-300{animation-delay:0.3s;}.delay-400{animation-delay:0.4s;}.delay-500{animation-delay:0.5s;}
+
+.btn-primary{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#14c48a,#0f9b7a);color:var(--white);padding:14px 32px;border-radius:50px;font-family:var(--font-heading);font-weight:600;font-size:15px;border:none;cursor:pointer;transition:var(--transition);box-shadow:0 4px 20px rgba(15,155,122,0.3);}
+.btn-primary:hover{background:linear-gradient(135deg,#10a876,#0a7a60);transform:translateY(-2px);box-shadow:0 8px 28px rgba(15,155,122,0.4);}
+.btn-outline{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--primary);padding:13px 32px;border-radius:50px;font-family:var(--font-heading);font-weight:600;font-size:15px;border:2px solid var(--primary);cursor:pointer;transition:var(--transition);}
+.btn-outline:hover{background:var(--primary);color:var(--white);transform:translateY(-2px);}
+.btn-white{display:inline-flex;align-items:center;gap:8px;background:var(--white);color:var(--primary);padding:14px 32px;border-radius:50px;font-family:var(--font-heading);font-weight:600;font-size:15px;border:none;cursor:pointer;transition:var(--transition);box-shadow:0 4px 20px rgba(0,0,0,0.12);}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,0.18);}
+
+.section-badge{display:inline-flex;align-items:center;gap:8px;background:var(--primary-light);color:var(--primary-dark);padding:6px 18px;border-radius:50px;font-size:13px;font-weight:600;font-family:var(--font-heading);margin-bottom:16px;}
+.section-badge::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--primary);}
+.section-title{font-size:clamp(28px,4vw,42px);color:var(--navy);margin-bottom:16px;}
+.section-title span{color:var(--primary);}
+.section-subtitle{font-size:16px;color:var(--gray-text);max-width:560px;line-height:1.8;}
+.container{max-width:1200px;margin:0 auto;padding:0 24px;}
+
+@media(max-width:768px){.container{padding:0 16px;}}

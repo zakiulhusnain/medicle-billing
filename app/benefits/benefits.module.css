@@ -1,0 +1,54 @@
+.pageHero {
+  padding: 160px 0 100px;
+  background: linear-gradient(135deg, #e8f7f5 0%, #f8fbfa 100%);
+}
+.heroInner { max-width: 700px; }
+
+.benefitsSection { padding: 100px 0; background: white; }
+.benefitsGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.benefitCard {
+  padding: 32px 24px; border-radius: var(--radius-md);
+  border: 1.5px solid var(--gray-light); transition: var(--transition);
+}
+.benefitCard:hover { border-color: var(--primary); box-shadow: var(--shadow-md); transform: translateY(-6px); }
+.benefitIcon { font-size: 36px; margin-bottom: 16px; }
+.benefitCard h3 { font-size: 17px; color: var(--navy); margin-bottom: 10px; }
+.benefitCard p { font-size: 14px; color: var(--gray-text); line-height: 1.7; }
+
+.compareSection { padding: 100px 0; background: var(--off-white); }
+.compareTable { border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-md); }
+.compareHeader, .compareRow {
+  display: grid; grid-template-columns: 2fr 1fr 1fr;
+}
+.compareHeader {
+  background: var(--navy); padding: 20px 28px;
+  font-family: var(--font-heading); font-weight: 700; color: white;
+}
+.compareVcera { color: var(--accent) !important; }
+.compareRow { padding: 16px 28px; background: white; border-bottom: 1px solid var(--gray-light); align-items: center; }
+.evenRow { background: var(--gray-light); }
+.compareFeature { font-weight: 600; color: var(--navy); font-size: 15px; }
+.compareInHouse { font-size: 14px; color: #e05252; }
+.compareRow .compareVcera { font-size: 14px; color: var(--primary); font-weight: 700; }
+
+.roiSection { padding: 100px 0; background: white; }
+.roiGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.roiStats { display: flex; gap: 32px; margin-top: 24px; }
+.roiStat strong { display: block; font-size: 36px; font-family: var(--font-heading); color: var(--primary); }
+.roiStat span { font-size: 13px; color: var(--gray-text); }
+
+.roiCard {
+  background: var(--navy); padding: 40px; border-radius: var(--radius-lg);
+  color: white;
+}
+.roiCard h3 { font-size: 20px; margin-bottom: 28px; }
+.roiItem { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.roiItem span { font-size: 14px; color: rgba(255,255,255,0.7); }
+.roiItem strong { font-size: 18px; font-family: var(--font-heading); color: white; }
+.roiBar { height: 6px; background: rgba(255,255,255,0.15); border-radius: 3px; margin-bottom: 24px; overflow: hidden; }
+.roiBar div { height: 100%; background: linear-gradient(to right, var(--primary), var(--accent)); border-radius: 3px; }
+.roiFootnote { font-size: 12px; color: rgba(255,255,255,0.4); margin-top: 12px; }
+
+@media (max-width: 1280px) { .benefitsGrid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 1024px) { .benefitsGrid { grid-template-columns: repeat(2, 1fr); } .roiGrid { grid-template-columns: 1fr; gap: 48px; } }
+@media (max-width: 640px) { .benefitsGrid { grid-template-columns: 1fr; } .compareRow, .compareHeader { grid-template-columns: 1.5fr 1fr 1fr; } }

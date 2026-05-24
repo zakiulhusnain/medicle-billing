@@ -1,0 +1,235 @@
+.hero {
+  padding: 100px 0 80px;
+  background: linear-gradient(135deg, rgba(92, 184, 92, 0.05) 0%, rgba(52, 152, 219, 0.05) 100%);
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-top: 70px;
+}
+
+.heroBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.heroBgCircle1 {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(92, 184, 92, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  top: -100px;
+  right: 10%;
+  animation: float 20s ease-in-out infinite;
+}
+
+.heroBgCircle2 {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(52, 152, 219, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  bottom: -50px;
+  left: 5%;
+  animation: float 25s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(20px); }
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+}
+
+.heroContent h1 {
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  color: #0a2540;
+}
+
+.heroSubtitle {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #666;
+  max-width: 800px;
+}
+
+.titleSection {
+  padding: 60px 0;
+  background: white;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.sectionTitle {
+  font-size: 42px;
+  font-weight: 900;
+  text-align: center;
+  color: #0a2540;
+}
+
+.sectionTitle span {
+  color: #5cb85c;
+}
+
+.specialtiesSection {
+  padding: 100px 0;
+  background: white;
+}
+
+.specialtiesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 24px;
+}
+
+.specialtyCard {
+  background: linear-gradient(135deg, rgba(92, 184, 92, 0.08) 0%, rgba(52, 152, 219, 0.08) 100%);
+  border: 1px solid rgba(92, 184, 92, 0.2);
+  border-radius: 12px;
+  padding: 40px 24px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 180px;
+}
+
+.specialtyCard:hover {
+  border-color: #5cb85c;
+  box-shadow: 0 8px 24px rgba(92, 184, 92, 0.15);
+  transform: translateY(-4px);
+  background: linear-gradient(135deg, rgba(92, 184, 92, 0.15) 0%, rgba(52, 152, 219, 0.15) 100%);
+}
+
+.specialtyIcon {
+  font-size: 48px;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.specialtyCard h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0a2540;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.ctaSection {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #0a2540 0%, #1a3a52 100%);
+}
+
+.ctaBox {
+  text-align: center;
+}
+
+.ctaBox h2 {
+  font-size: 48px;
+  font-weight: 900;
+  color: white;
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+
+.ctaBox p {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 48px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ctaButtons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.ctaButtonPrimary {
+  display: inline-block;
+  background: #5cb85c;
+  color: white;
+  padding: 16px 48px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.ctaButtonPrimary:hover {
+  background: #4cae4c;
+  box-shadow: 0 12px 32px rgba(92, 184, 92, 0.3);
+  transform: translateY(-2px);
+}
+
+.contactInfo {
+  color: white;
+}
+
+.contactInfo p {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+.phone {
+  font-size: 28px;
+  font-weight: 900;
+  color: #5cb85c;
+}
+
+@media (max-width: 768px) {
+  .heroContent h1 {
+    font-size: 32px;
+  }
+
+  .sectionTitle {
+    font-size: 28px;
+  }
+
+  .specialtiesGrid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 16px;
+  }
+
+  .specialtyCard {
+    padding: 24px 16px;
+    min-height: 140px;
+  }
+
+  .specialtyIcon {
+    font-size: 36px;
+    margin-bottom: 12px;
+  }
+
+  .specialtyCard h3 {
+    font-size: 13px;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .ctaBox h2 {
+    font-size: 32px;
+  }
+}

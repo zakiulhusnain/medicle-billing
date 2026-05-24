@@ -190,7 +190,7 @@ export default function Navbar() {
         </ul>
 
         <div className={styles.navActions}>
-          <Link href="/services" className={styles.requestDemo}>Request Demo</Link>
+          {/* <Link href="/services" className={styles.requestDemo}>Request Demo</Link> */}
           <button
             className={`${styles.hamburger} ${menuOpen ? styles.hamburgerOpen : ''}`}
             onClick={() => setMenuOpen(!menuOpen)}
